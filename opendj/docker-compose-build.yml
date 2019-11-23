@@ -1,0 +1,19 @@
+version: "3"
+networks:
+  net:
+services:
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  opendj:
+    container_name: opendj-6.5.0
+    build: .
+      # context: ./
+    ports:
+      - "1389:1389"
+      - "1636:1636"
+      - "4444:4444"
+      - "8443:8443"
+    networks:
+      - net
+    restart: always
+
+                  

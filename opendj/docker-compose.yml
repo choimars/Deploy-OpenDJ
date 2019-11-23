@@ -1,0 +1,25 @@
+version: "3"
+networks:
+  net:
+
+volumes: 
+  logs:  
+  
+services:
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  opendj:
+    container_name: OpenDJ
+    # image: choimars/ldap:opendj-1.1
+    build: .
+    ports:
+      - "1389:1389"
+      - "1636:1636"
+      - "4444:4444"
+      - "8443:8443"
+    networks:
+      - net
+    volumes: 
+      - logs:/opt/opendj/logs  
+    restart: always
+
+                  
