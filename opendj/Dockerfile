@@ -26,7 +26,7 @@ RUN yum install -y wget unzip
 
 WORKDIR /opt
 
-RUN wget http://share.triangles.kr/share/FILES/OpenDJ/opendj-$VERSION.zip && \
+RUN wget http://share.triangles.kr/FILES/OpenDJ/opendj-$VERSION.zip && \
   unzip opendj-$VERSION.zip && \
   rm -r opendj-$VERSION.zip
 
