@@ -4,6 +4,7 @@ networks:
 
 volumes: 
   logs:  
+  db:  
   
 services:
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -20,6 +21,7 @@ services:
       - net
     volumes: 
       - logs:/opt/opendj/logs  
+      - db:/opt/opendj/db  
     restart: always
 
                   
